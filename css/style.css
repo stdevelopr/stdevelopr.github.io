@@ -1,0 +1,85 @@
+body, html{ 
+  height: 100%;
+  width: 100%;
+  margin: 0;   
+}
+
+#particles-js{ 
+	position:absolute; 
+	width: 50%; 
+	height: 50%; 
+	background-position: 50% 50%; 
+}
+
+
+.count-particles{ 
+	background: #000022; 
+	position: absolute; 
+	top: 48px; 
+	left: 0; 
+	width: 100%; 
+	color: #13E8E9; 
+	font-size: .8em; 
+	text-align: left; 
+	text-indent: 4px; 
+	line-height: 14px; 
+	padding-bottom: 2px; 
+	font-family: Helvetica, Arial, sans-serif; font-weight: bold; 
+	border: solid 3px blue;
+} 
+
+
+.js-count-particlesn{ 
+	font-size: 1.1em; 
+} 
+
+#stats, .count-particles{ 
+	-webkit-user-select: none; 
+	margin-top: 5px; 
+	margin-left: 5px; 
+} 
+
+#stats{ 
+	border-radius: 3px 3px 0 0; 
+	overflow: hidden; 
+} 
+
+.count-particles{ 
+	border-radius: 0 0 3px 3px; 
+}
+
+#first_section{
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(black, red);
+}
+
+.second_section{
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(red, yellow);
+}
+
+.third_section{
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(yellow, green);
+}
+
+.fourth_section{
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(green, blue);
+}
+
+#logo{
+    position: absolute;
+    bottom: 0%;
+    left: 45%; 
+    text-align: center;  
+}
+
+
+#svg8{
+ height: 100px;
+}

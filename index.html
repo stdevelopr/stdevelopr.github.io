@@ -1,18 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Hello World!</title>
-	<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
-	<link rel="stylesheet" href="main.css">
-</head>
-<body>
-<header>
-    <div id="logo">
-    <img id= "imglogo" src="/images/logo.svg" alt="">
-    </div>
-    
-</header>
+	<head>
+		<meta charset="UTF-8">
+		<title>Hello World!</title>
+
+		<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+		<link href="external/jquery/jquery-ui.css" rel="stylesheet"> <!-- Jquery-ui css -->
+		<link rel="stylesheet" href="main.css"> <!-- css file -->
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
+		<script src="external/jquery/jquery.js"> </script>  <!-- external Jquery-ui -->
+		<script src="external/jquery/jquery-ui.js"></script>  <!-- Jquery-ui -->
+		<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib -->
+		<link rel="stylesheet" href="css/style.css"> 
+		
+	</head>
+	<body>
+
+		<div id="first_section">
+			<span style="color: white">Here is the first section </span>			
+			<div id="logo"> </div>					
+		</div> <!-- particles.js container -->
+
 	
-</body>
+		<div class="second_section">
+			Here the second Section
+		</div>
+
+		<div class="third_section">
+			Here the third Section
+		</div>
+
+		<div class="fourth_section">
+			Here the fourth Section
+		</div>
+		
+		
+		
+		
+		<script  src="js/index.js"></script>
+		
+		<script>
+			var logo = Snap('#logo'); 
+			Snap.load("/images/logo.svg", function(data) {
+        	logo.append(data);
+    		});
+		</script>
+				
+	</body>
 </html>
