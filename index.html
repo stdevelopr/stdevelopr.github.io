@@ -49,16 +49,20 @@
 			<script  src="js/index.js"></script>
 			
 			<script>
-				$(function() {
-					
-			var distance = $('#navbar').offset().top,
-			$window = $(window);
-			console.log(distance);
-			$window.scroll(function() {
-			$('#navbar').toggleClass('fixedtop', $window.scrollTop() >= distance)
-			$('#hello').toggleClass('hide', $window.scrollTop() >= distance)
-			});
-			});
+				window.onscroll = function(){
+					first_element_height= document.getElementById('first_section').clientHeight
+					pageoffset = window.pageYOffset;
+					console.log("offset=", pageoffset);
+					var navbar = document.getElementById('navbar');
+					var distance = navbar.getBoundingClientRect().top;
+					console.log("distance = ", distance);
+					console.log("distance + offset= ", distance + pageoffset);
+					if(pageoffset>=first_element_height && distance<=0){
+			navbar.classList.add("fixedtop")
+			} else {
+			navbar.classList.remove("fixedtop");
+			}
+					}
 			</script>
 			
 		</body>
