@@ -16,7 +16,6 @@ body, html{
 }
 
 #navbar {
-	position: relative;
 	height: 5%;
 	margin:0;
 	padding: 0;
@@ -33,10 +32,6 @@ body, html{
 	float: left;
 	margin-left: 3%;
 	z-index: 16;
-/*	margin:0;
-	padding: 0;
-	height:100%;
-	width: 10%;*/
 }
 
 #hello{
@@ -102,7 +97,7 @@ body, html{
 }
 
 .container-geo{
-	 border: solid 3px green;
+	border: solid 3px green;
 	position: absolute;
 	top: 20%;
 	bottom: 30%;
