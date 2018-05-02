@@ -5,6 +5,7 @@
 		<title>Hello World!</title>
 		<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
 		<link href="external/jquery/jquery-ui.css" rel="stylesheet"> <!-- Jquery-ui css -->
+		<link rel="stylesheet" href="external/aos/aos.css" />
 		
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
 		<script src="external/jquery/jquery.js"> </script>  <!-- external Jquery-ui -->
@@ -17,23 +18,26 @@
 		<div id="first_section">
 			<div id="logo"><img src="/images/logo.svg" alt=""></div>
 			<span style="color: white">Here is the first section </span>
-			<div id="hello"><img src="/images/git.png" alt=""></div>
-		</div> <!-- particles.js container -->
+			<div id="hello" onclick="typeWriter()"><img src="/images/git.png" alt=""></div>
+			</div> <!-- particles.js container -->
 			
 			<div id="navbar">
+				<div id="text"></div>
 				
-				TEXTO
 				<div id="github"> gitsymbol  </div>
 				<div id="email"> email  </div>
 			</div>
 			
 			<div class="second_section">
+				<div id="deg_descript" class="description" data-aos="slide-right"> Earth Sciences </div>
+				<div id="grad" data-aos="zoom-out">	<b>Geophysics</b></div>
+
 				<div class="container-geo">
 					<img src="/images/geo.svg" alt="">
-					<div id="grad">	Bachelor Degree in Geophysics</div>
-					<div id="deg_descript"> Earth Sciences </div>
 				</div>
 			</div>
+
+
 			<div class="third_section">
 				Here the third Section
 			</div>
@@ -45,8 +49,11 @@
 			</div>
 			
 			
-			
-			
+	
+			<script  src="external/aos/aos.js"></script>
+					<script>
+				AOS.init();
+			</script>
 			<script  src="js/index.js"></script>
 			
 			<script>
@@ -56,11 +63,26 @@
 					var navbar = document.getElementById('navbar');
 					var distance = navbar.getBoundingClientRect().top;
 					if(pageoffset>=first_element_height && distance<=0){
-			navbar.classList.add("fixedtop")
-			} else {
-			navbar.classList.remove("fixedtop");
-			}
+						navbar.classList.add("fixedtop")
+					} else {
+						navbar.classList.remove("fixedtop");
 					}
+				}
+			</script>
+
+
+			<!-- text typing effect -->
+			<script>
+				var i = 0;
+				var txt = 'Lorem ipsum dummy text blabla.';
+				var speed = 50;
+				function typeWriter() {
+					if (i < txt.length) {
+					document.getElementById("text").innerHTML += txt.charAt(i);
+					i++;
+					setTimeout(typeWriter, speed);
+					}
+				};
 			</script>
 			
 		</body>

@@ -54,16 +54,19 @@ body, html{
 
 #hello img {
   position: absolute;
-  height: 100px;
+  height: 20%;
   bottom: -7%;
   z-index: 14;
   /*border: solid 3px;*/
 }
 
 #navbar #github, #email{
+	/*position: absolute;*/
 	float: right;
 	height: 100%;
 	width: 100px;
+
+
 }
 
 
@@ -76,6 +79,11 @@ body, html{
    rgba(0,0,0,1) 50%,
    rgba(0,0,0,0) 100%
 ) !important;
+  /*float: right;*/
+  right: 0;
+
+  width: 60% !important;
+  transition: width 0.5s;
 }
 
 .hide{
@@ -85,18 +93,21 @@ body, html{
 /*second section*/
 
 .second_section{
-	position: absolute;
+	position: relative;
 	/*top:10px;*/
     height: 100%;
     width: 100%;
     background: linear-gradient(red, yellow);
-    /*border: solid 3px green*/
+    /*border: solid 3px green;*/
 }
 
 .container-geo{
-	position: relative;
-	height: 100%;
-	width: 100%;
+	 border: solid 3px green;
+	position: absolute;
+	top: 20%;
+	bottom: 30%;
+	left: 30%;
+	right: 30%;
 	color: black;
 	background: url(/images/space-noblur.png) no-repeat center center;
 }
@@ -113,15 +124,28 @@ body, html{
 
 }
 
-.container-geo #grad{
-	position: relative;
+#grad{
+	color: white;
+	position: sticky;
 	width: 20%;
-	height: 100px;
-	top: 80%;
+	height: 3%;
+	top: 0;
 	left: 40%;
 	font-size: 30px;
 	text-align: center;
+	/*border-bottom:  solid 3px;*/
+	z-index: 20;
+}
+
+.description{
+position: absolute;
+	width: 20%;
+	height: 100px;
+	top: 50%;
+	font-size: 30px;
+	text-align: center;
 	border: solid 3px;
+
 }
 
 /*upcoming sections*/
