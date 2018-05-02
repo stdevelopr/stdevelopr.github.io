@@ -3,7 +3,6 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Hello World!</title>
-
 		<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
 		<link href="external/jquery/jquery-ui.css" rel="stylesheet"> <!-- Jquery-ui css -->
 		<link rel="stylesheet" href="main.css"> <!-- css file -->
@@ -12,45 +11,56 @@
 		<script src="external/jquery/jquery.js"> </script>  <!-- external Jquery-ui -->
 		<script src="external/jquery/jquery-ui.js"></script>  <!-- Jquery-ui -->
 		<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib -->
-		<link rel="stylesheet" href="css/style.css"> 
+		<link rel="stylesheet" href="css/style.css">
 		
 	</head>
 	<body>
-
 		<div id="first_section">
-			<span style="color: white">Here is the first section </span>			
-			<div id="logo"> </div>					
-		</div> <!-- particles.js container -->
-
-	
-		<div class="second_section">
-			<div class="container-geo">
-				<img src="/images/geo.svg" alt=""> 
-				<div id="grad">	Bachelor Degree in Geophysics</div>
-				<div id="deg_descript"> Earth Sciences </div>
-
-			</div>
-		</div>
-
-		<div class="third_section">
-			Here the third Section
-		</div>
-
-		<div class="fourth_section">
-			Here the fourth Section
-		</div>
-		
-		
-		
-		
-		<script  src="js/index.js"></script>
-		
-		<script>
-			var logo = Snap('#logo'); 
-			Snap.load("/images/logo.svg", function(data) {
-        	logo.append(data);
-    		});
-		</script>
+			<div id="logo"><img src="/images/logo.svg" alt=""></div>
+			<span style="color: white">Here is the first section </span>
+			<div id="hello"><img src="/images/git.png" alt=""></div>
+			</div> <!-- particles.js container -->
+			<div id="navbar">
 				
-	</body>
-</html>
+				TEXTO
+				<div id="github"> gitsymbol  </div>
+				<div id="email"> email  </div>
+			</div>
+			
+			<div class="second_section">
+				<div class="container-geo">
+					<img src="/images/geo.svg" alt="">
+					<div id="grad">	Bachelor Degree in Geophysics</div>
+					<div id="deg_descript"> Earth Sciences </div>
+				</div>
+			</div>
+			<div class="third_section">
+				Here the third Section
+			</div>
+			<div class="fourth_section">
+				Here the fourth Section
+			</div>
+			<div class="fifth_section">
+				Here the fifth Section
+			</div>
+			
+			
+			
+			
+			<script  src="js/index.js"></script>
+			
+			<script>
+				$(function() {
+					
+			var distance = $('#navbar').offset().top,
+			$window = $(window);
+			console.log(distance);
+			$window.scroll(function() {
+			$('#navbar').toggleClass('fixedtop', $window.scrollTop() >= distance)
+			$('#hello').toggleClass('hide', $window.scrollTop() >= distance)
+			});
+			});
+			</script>
+			
+		</body>
+	</html>
