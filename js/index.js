@@ -18,10 +18,3 @@ particlesJS("first_section",
 	"push":{"particles_nb":4},
 	"remove":{"particles_nb":2}}},
 	"retina_detect":true});
-var count_particles, stats, update; 
-update = function() { 
-
-	
-	requestAnimationFrame(update); 
-}; 
-requestAnimationFrame(update);

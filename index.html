@@ -18,7 +18,8 @@
 			<div id="logo"><img src="/images/logo.svg" alt=""></div>
 			<span style="color: white">Here is the first section </span>
 			<div id="hello"><img src="/images/git.png" alt=""></div>
-			</div> <!-- particles.js container -->
+		</div> <!-- particles.js container -->
+			
 			<div id="navbar">
 				
 				TEXTO
@@ -52,11 +53,8 @@
 				window.onscroll = function(){
 					first_element_height= document.getElementById('first_section').clientHeight
 					pageoffset = window.pageYOffset;
-					console.log("offset=", pageoffset);
 					var navbar = document.getElementById('navbar');
 					var distance = navbar.getBoundingClientRect().top;
-					console.log("distance = ", distance);
-					console.log("distance + offset= ", distance + pageoffset);
 					if(pageoffset>=first_element_height && distance<=0){
 			navbar.classList.add("fixedtop")
 			} else {

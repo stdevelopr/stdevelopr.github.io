@@ -4,43 +4,6 @@ body, html{
   margin: 0;   
 }
 
-.count-particles{ 
-	background: #000022; 
-	position: absolute; 
-	top: 48px; 
-	left: 0; 
-	width: 100%; 
-	color: #13E8E9; 
-	font-size: .8em; 
-	text-align: left; 
-	text-indent: 4px; 
-	line-height: 14px; 
-	padding-bottom: 2px; 
-	font-family: Helvetica, Arial, sans-serif; font-weight: bold; 
-	border: solid 3px blue;
-} 
-
-
-.js-count-particlesn{ 
-	font-size: 1.1em; 
-} 
-
-#stats, .count-particles{ 
-	-webkit-user-select: none; 
-	margin-top: 5px; 
-	margin-left: 5px; 
-} 
-
-#stats{ 
-	border-radius: 3px 3px 0 0; 
-	overflow: hidden; 
-} 
-
-.count-particles{ 
-	border-radius: 0 0 3px 3px; 
-}
-
-/*first section*/
 
 #first_section{
 	position: relative;
@@ -49,10 +12,12 @@ body, html{
     margin: 0;
     padding: 0;
     background: linear-gradient(black, red);
+    /*border: 1px solid blue;*/
 }
 
 #navbar {
-	height: 100px;
+	position: relative;
+	height: 5%;
 	margin:0;
 	padding: 0;
     width: 100%; 
@@ -60,13 +25,14 @@ body, html{
     text-align: center;
     color: white;
     z-index: 10;
+    /*border: solid white 1px;*/
 }
 
 #logo{
 	position: fixed;
 	float: left;
 	margin-left: 3%;
-	z-index: 11;
+	z-index: 16;
 /*	margin:0;
 	padding: 0;
 	height:100%;
@@ -74,7 +40,7 @@ body, html{
 }
 
 #hello{
-	position: relative;
+	/*position: relative;*/
 	top:95%;
 	float: left;
 	margin-left: 1%;
@@ -82,12 +48,16 @@ body, html{
 	padding: 0;
 	height:80px;
 	width: 10%;
-	z-index:9;
+	z-index:15;
 }
 
 
 #hello img {
-  height: 200%;
+  position: absolute;
+  height: 100px;
+  bottom: -7%;
+  z-index: 14;
+  /*border: solid 3px;*/
 }
 
 #navbar #github, #email{
@@ -98,7 +68,7 @@ body, html{
 
 
 .fixedtop{
-  position: fixed;
+  position: fixed !important;
   top: 0 !important;
   background: linear-gradient(
    to bottom, 
@@ -115,9 +85,12 @@ body, html{
 /*second section*/
 
 .second_section{
+	position: absolute;
+	/*top:10px;*/
     height: 100%;
     width: 100%;
     background: linear-gradient(red, yellow);
+    /*border: solid 3px green*/
 }
 
 .container-geo{
