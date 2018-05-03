@@ -80,7 +80,7 @@
 					var distance = navbar.getBoundingClientRect().top;
 
 					var svg = document.getElementById("svg1");
-					var doc = svg.getSVGDocument();
+					var doc = svg.contentDocument;
     				var slice = doc.querySelector("#slice");
 
 					if(pageoffset>=first_element_height && distance<=0){
