@@ -57,21 +57,8 @@
 			</script>
 			<script  src="js/index.js"></script>
 
-<!-- 			<script>
-			var icon = Snap("#earth");
-			console.log(icon);
-            
-            Snap.load("images/geo.svg", function(data) {
-                icon.append(data);
-                console.log(icon);
-                // icon.select("#slice_layer").attr({width:"100%"});
-            });
-            $("#slice_layer").css("width", "100%");
-			
-            </script> -->
 
-
-			
+			<!-- scroll effects -->
 			<script>
 				window.onscroll = function(){
 					first_element_height= document.getElementById('first_section').clientHeight
@@ -84,12 +71,12 @@
     				var slice = doc.querySelector("#slice");
 
 					if(pageoffset>=first_element_height && distance<=0){
-						navbar.classList.add("fixedtop");						
-	    				slice.setAttribute("opacity", "1");
+						navbar.classList.add("fixedtop");	
+						slice.style.setProperty("opacity", "1.0", "")					
 					} else {
 						navbar.classList.remove("fixedtop");
 						slice.style.transition = 'opacity  0.5s';
-						slice.setAttribute("opacity", "0");
+						slice.style.setProperty("opacity", "0.0", "")
 					}};		
 			</script>
 
