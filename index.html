@@ -28,10 +28,13 @@
 		</div> <!-- navbar -->
 			
 		<div class="second_section">
-			<div id="deg_descript" class="description" data-aos="slide-right"> Earth Sciences </div>
-			<div id="grad" data-aos="zoom-out">	<b>Geophysics</b></div>
-			<div class="container-geo">
-				<img src="/images/geo.svg" alt="">
+			<div id="deg_descript" class="description" data-aos="flip-left"> <!-- Geoprocessing <br> Signal Processing <br> Data analysis <br> Data modeling <br> QGIS <br> PostgreeSQL + PostGis  --></div>
+			<div id="grad" data-aos="zoom-out">	<!-- <b>Geophysics</b> --></div>
+			<div id="earth">
+				<object id="svg1" type="image/svg+xml" data="images/geo.svg">
+  Your browser does not support SVG
+</object>
+				<!-- <img src="/images/geo.svg" alt=""> -->
 			</div>
 		</div>
 			<div class="third_section">
@@ -43,6 +46,7 @@
 			<div class="fifth_section">
 				Here the fifth Section
 			</div>
+
 			
 			
 			
@@ -51,6 +55,21 @@
 			AOS.init();
 			</script>
 			<script  src="js/index.js"></script>
+
+<!-- 			<script>
+			var icon = Snap("#earth");
+			console.log(icon);
+            
+            Snap.load("images/geo.svg", function(data) {
+                icon.append(data);
+                console.log(icon);
+                // icon.select("#slice_layer").attr({width:"100%"});
+            });
+            $("#slice_layer").css("width", "100%");
+			
+            </script> -->
+
+
 			
 			<script>
 				window.onscroll = function(){
@@ -58,13 +77,22 @@
 					pageoffset = window.pageYOffset;
 					var navbar = document.getElementById('navbar');
 					var distance = navbar.getBoundingClientRect().top;
+
+					var svg = document.getElementById("svg1");
+					var doc = svg.getSVGDocument();
+    				var slice = doc.querySelector("#slice");
+
 					if(pageoffset>=first_element_height && distance<=0){
-						navbar.classList.add("fixedtop")
+						navbar.classList.add("fixedtop");						
+	    				slice.setAttribute("opacity", "1");
 					} else {
 						navbar.classList.remove("fixedtop");
-					}
-				}
+						slice.style.transition = 'opacity  0.5s';
+						slice.setAttribute("opacity", "0");
+					}};		
 			</script>
+
+			
 			<!-- text typing effect -->
 			<script>
 				var i = 0;
