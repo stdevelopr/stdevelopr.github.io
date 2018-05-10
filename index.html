@@ -11,12 +11,13 @@
 		<script src="external/jquery/jquery.js"> </script>  <!-- external Jquery-ui -->
 		<!-- <script src="external/jquery/jquery-ui.js"></script>   --><!-- Jquery-ui -->
 		<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib -->
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/style.css">
 		
 	</head>
 	<body>
 		<div id="first_section">
-			<div id="logo"><img src="/images/logo.svg" alt=""></div>
+			<div class="sticky-top"><img src="/images/logo.svg" alt=""></div>
 			<span style="color: white">Here is the first section </span>
 			<div id="hello" onclick="typeWriter()"><img src="/images/git.png" alt=""></div>
 		</div> <!-- particles.js container -->
@@ -27,17 +28,72 @@
 			<div id="email"> email  </div>
 		</div> <!-- navbar -->
 			
-		<div class="second_section">
-			<div id="deg_descript" class="description" data-aos="flip-left"> <!-- Geoprocessing <br> Signal Processing <br> Data analysis <br> Data modeling <br> QGIS <br> PostgreeSQL + PostGis  --></div>
-			<div id="grad" data-aos="zoom-out">	<!-- <b>Geophysics</b> --></div>
-			<div id="earth">
-				<object id="svg1" type="image/svg+xml" data="images/geo.svg">
- 				 Your browser does not support SVG
-				</object>
-				<!-- <img src="/images/geo.svg" alt=""> -->
+		<div class="second_section container-fluid">
+			<div class="sticky-top bg-nav" data-aos="zoom-out">	Formation </div>  <!-- navbar -->
+			
+			<!-- Geophysics Logo -->
+			<div class="row h-auto mt-5">
+				<div class="col-sm-3 bg-formation ml-2"><p></p></div>
+				<div class="col-sm-1 text-center "> <b>Bachelor Degree </div>
+				<div class="col-sm-8"></div>
 			</div>
+			<!--  Earth logo -->
+			<div class="row m-1">
+				<div class="col-sm-3">    
+					<object id="svg1" type="image/svg+xml" data="images/geo.svg" style="height: 300px">
+					Your browser does not support SVG
+					</object>
+				</div> <!--  Earth logo -->
 
-		</div>
+
+				<!-- Working with data information cards-->
+				<div class="col-sm-9 d-none d-sm-block">
+					<div class="row d-flex flex-column flex-wrap text-center">Working with data</div> 
+
+					<div class="row h-75 d-flex align-items-start"> 
+
+						<div class="col-sm-6 col-lg-3 h-100 d-none d-sm-block">
+							<img class="d-none d-sm-block" src="/images/data_acquisition.jpg" alt="" style="width: 100%; height: 100%; border-radius: 25px">
+						</div>
+
+						<div class="d-none d-lg-block col-lg-3 h-100">
+							<img class="d-none d-sm-block" src="/images/segy-code.png" alt="" style="width: 100%; height: 100%; border-radius: 25px">
+						</div>
+
+						<div class="d-none d-lg-block col-lg-3  h-100">
+							<img class="d-none d-sm-block" src="/images/equation.jpg" alt="" style="width: 100%; height: 100%; border-radius: 25px">
+						</div>
+
+						<div class="col-sm-6 col-lg-3 h-100 d-none d-sm-block">
+							<img class="d-none d-sm-block" src="/images/interpret.png" alt="" style="width: 100%; height: 100%; border-radius: 25px">
+						</div>
+					</div>
+					
+					<!-- row of information -->
+					<div class="row bg-dark m-1 text-center text-white" style="border-radius: 25px">
+						<div class="col-3"> Acquire</div>
+						<div class="col-3"> Process</div>
+						<div class="col-3"> Analise</div>
+						<div class="col-3"> Interpret</div>
+					</div>					
+				</div> <!-- Working with data information cards-->
+
+				<!-- xmall devices -->
+				<div class="row bg-primary d-sm-none align-items-center m-1" style="width: 100%">
+					<div class="col-12 bg-warning text-center">Data</div>
+				</div>
+					
+				<div class="row bg-info d-flex d-sm-none m-1" style="width: 100%; font-size: 3vw">
+					<div class="col-3 bg-info"> Acquire</div>
+					<div class="col-3 bg-primary"> Process</div>
+					<div class="col-3 bg-secondary"> Analise</div>
+					<div class="col-3"> Interpret</div>
+				</div><!-- xmall devices -->
+					
+			</div>			
+		</div>  <!-- end section two -->
+
+
 			<div class="third_section">
 				Here the third Section
 			</div>
@@ -49,7 +105,9 @@
 			</div>
 
 			
-			
+			<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 			
 			<script  src="external/aos/aos.js"></script>
 			<script>

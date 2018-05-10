@@ -27,12 +27,12 @@ body, html{
     /*border: solid white 1px;*/
 }
 
-#logo{
+/*#logo{
 	position: fixed;
 	float: left;
 	margin-left: 3%;
 	z-index: 16;
-}
+}*/
 
 #hello{
 	/*position: relative;*/
@@ -97,6 +97,12 @@ body, html{
     /*border: solid 3px green;*/
 }
 
+.bg-formation{
+	background: url(/images/geophysics.png) no-repeat center;
+	background-size: contain;
+
+}
+
 #earth{
 	border: solid 3px green;
 	position: absolute;
@@ -124,17 +130,17 @@ body, html{
 
 }
 
-#grad{
+.bg-nav{
 	/*font-size: 3vb;*/
 	color: white;
-	position: sticky;
+/*	position: sticky;*/
 	width: 20%;
 	height: 3%;
 	top: 0;
 	left: 40%;
 	text-align: center;
 	/*border-bottom:  solid 3px;*/
-		background: url(/images/teste.png) no-repeat center ;
+		/*background: url(/images/teste.png) no-repeat center ;*/
 	background-size: contain;
 	z-index: 20;
 }
